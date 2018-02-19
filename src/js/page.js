@@ -2,7 +2,7 @@ $(function() {
     // svg4everybody init
     svg4everybody();
     
-    var popupOpenBtn = document.querySelector(".asd-popup__open");
+	var popupOpenBtn = document.querySelector(".asd-popup__open");
 	var popupCloseBtn = document.querySelector(".asd-popup__close"); 
 	var links = document.querySelectorAll(".options__item");
 	 
