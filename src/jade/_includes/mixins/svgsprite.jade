@@ -1,0 +1,11 @@
+mixin svgsprite(name)
+    svg(class="asd-svgsprite -" + name)
+        use(xlink:href="/assets/img/sprites/svgsprites.svg#" + name)
+
+mixin svgsprite_error(name)
+    svg(class="asd-svgsprite -error -" + name)
+        use(xlink:href="/assets/img/sprites/svgsprites.svg#" + name)
+
+mixin svgsprite_success(name)
+    svg(class="asd-svgsprite -success -" + name)
+        use(xlink:href="/assets/img/sprites/svgsprites.svg#" + name)

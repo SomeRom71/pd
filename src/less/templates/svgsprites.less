@@ -1,0 +1,13 @@
+.asd-svgsprite {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+
+	{{#shapes}}
+    &.-{{base}} {
+    	font-size:{{height.inner}}*1px;
+    	width:({{width.inner}}/{{height.inner}})*1em;
+    }
+    {{/shapes}}
+}

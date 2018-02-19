@@ -1,0 +1,109 @@
+.asd-catalog
+  .asd-wrapper
+    h2.asd-catalog__title.asd-catalog__h2 Каталог ASD LAMINAT
+    .asd-rules.asd-catalog__rules
+      span.asd-rules__title Условия поставки:
+      p.asd-rules__text.asd-catalog__p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        | et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        | aliquip ex ea commodo consequat. Duis aute irure  quis nostrud exercitation ullamco laboris nisi
+        | ut aliquip ex ea commodo consequat. Duis aute irure  
+    .products.asd-catalog-products
+      .options.asd-products-options
+        span.options__title Подобрать по параметрам:
+        ul.asd-products-options__ul
+          li.options__item
+            a.asd-products-options__link(href='#') Формат
+            span.asd-products-options__img
+              +svgsprite("arrow")
+            ul.options__panel
+              - for (var x = 1; x < 4; x++)
+                li.options__sub-item
+                  a.asd-products-options__link(href='#') Формат#{x}
+          li.options__item
+            a.asd-products-options__link(href='#') Толщина
+            span.asd-products-options__img
+              +svgsprite("arrow")
+            ul.options__panel
+              - for (var x = 1; x < 4; x++)
+                li.options__sub-item
+                  a.asd-products-options__link(href='#') Толщина#{x}
+          li.options__item
+            a.asd-products-options__link(href='#') Теснение
+            span.asd-products-options__img
+              +svgsprite("arrow")
+            ul.options__panel
+              - for (var x = 1; x < 4; x++)
+                li.options__sub-item
+                  a.asd-products-options__link(href='#') Теснение#{x}
+          li.options__item
+            a.asd-products-options__link(href='#') Защитная пленка
+            span.asd-products-options__img
+               +svgsprite("arrow")
+            ul.options__panel
+              - for (var x = 1; x < 4; x++)
+                li.options__sub-item
+                  a.asd-products-options__link(href='#') Защитная пленка#{x}
+          li.options__item
+            a.asd-products-options__link(href='#') Коллекция
+            span.asd-products-options__img
+              +svgsprite("arrow")
+            ul.options__panel
+              - for (var x = 1; x < 4; x++)
+                li.options__sub-item
+                  a.asd-products-options__link(href='#') Коллекция#{x}
+        ul.asd-products-options__ul.asd-products-options__ul2
+          li.options__item
+            a.options__sale.asd-products-options__link(href='#') Распродажа
+          li.options__item
+            a.options__sale.asd-products-options__link(href='#') Новинки
+        a.asd-ad__link.options__link(href='#')
+          span.asd-ad__link_wrap Подобрать
+        a.options__reset.asd-products-options__reset(href='$') Сбросить параметры
+      .product-list.asd-catalog__list
+        .display
+          span.display__title Вариант отображения товаров:
+          a.display__link.asd-catalog__d-link(href='#')
+            +svgsprite("display1")
+          a.display__link.asd-catalog__d-link(href='#')
+            +svgsprite("display2")
+        ul.asd-catalog__ul
+          - for (var x = 0; x < 8; x++)
+            li.product-list__elem
+              .purchase.product-list__purchase
+                .purchase__block.purchase__wrap
+                  | Стоимость: 
+                  span.purchase__cost 5.50 €
+                  a.purchase__link.product-list__link(href='#') Добавить в корзину
+              a(href='#')
+                i.asd-sprite.-thumbnail
+                  //-img.product-list__img(src='images/thumbnail.jpg', alt='thumbnail')
+              a.product-list__title(href='#') WOODLINE 221
+              ul.asd-catalog__ul-sub
+                li.product-list__li-sub Формат (мм): 0,4х36мм
+                li.product-list__li-sub Коллекция: Однотонные
+                li.product-list__li-sub Материал: Пластик
+                li.product-list__li-sub Производитель: LEMARK
+        .pagination.product-list__pagination
+          ul
+            li.pagination__item
+              a.pagination__item_start(href='#')
+                +svgsprite("arrow_l")
+                | В начало
+            li.pagination__item
+              a(href='#') 1
+            li.pagination__item
+              a.pagination__item_active(href='#') 2
+            li.pagination__item
+              a.pagination__item_next(href='#') 3
+            li.pagination__item
+              a.pagination__item_end(href='#')
+                | В конец
+                +svgsprite("arrow_r")
+    .asd-rules.asd-catalog__rules
+      span.asd-rules__title Коллекция ARARA:
+      p.asd-rules__text.asd-catalog__p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        | et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        | aliquip ex ea commodo consequat. Duis aute irure  quis nostrud exercitation ullamco laboris nisi
+        | ut aliquip ex ea commodo consequat. Duis aute irure

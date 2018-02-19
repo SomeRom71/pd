@@ -1,0 +1,41 @@
+mixin asd-header(options)
+  - options = options ? options : {};
+
+  header.asd-header
+    .asd-wrapper
+      .logo.asd-header__logo
+        a(href="#")
+          i.asd-sprite.-logo
+      .asd-header-center
+        .asd-header-center__wrap
+          .asd-header-center__callback.callback
+            +svgsprite("phone")
+            a.callback__item(href='#')
+              | 8 (495) 
+              span.hightlight 960 68 15
+            a.callback__item2(href='#')|  Заказать обратный звонок
+          .asd-header-center__contact.header-contact
+            a.header-contact__item.asd-header-center__contact-item(href='#')
+              +svgsprite("mail")
+              |sales@general-plast.ru
+            a.header-contact__item.asd-header-center__contact-item(href='#')
+              +svgsprite("skype")
+              span.header-contact__item_light skype:
+              |  generalplast
+        nav.nav.asd-header-nav
+          ul
+            li.nav__link.asd-header-nav__li
+              a(href='#') Наша продукция
+            li.nav__link.asd-header-nav__li
+              a(href='#') Каталог кромки
+            li.nav__link.asd-header-nav__li
+              a(href='#') Скидка 15%
+            li.nav__link.asd-header-nav__li
+              a(href='#') Статьи
+            li.nav__link.asd-header-nav__li
+              a(href='#') Контакты
+      .bascet.asd-header-bascet
+        a.bascet__link(href='#')
+          +svgsprite("bascet")
+          span.bascet__num 0
+          |                   Корзина пуста
