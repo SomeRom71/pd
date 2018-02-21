@@ -1,12 +1,7 @@
-.asd-catalog{
+.catalog{
     background: url('../../images/catalog-bg.jpg');
     padding: 95px 0 120px;
     &__title{
-        font-family: Intro;
-        font-size: 36px;
-        text-align: center;
-    }
-    &__h2{
         padding-bottom: 27px;
     }
     &__rules{
@@ -18,21 +13,26 @@
         margin: 15px 0 45px;
         display: flex;
     }
-    &__list{
+    &__product-list{
         padding: 0 10px 0 30px;
     }
-    &__p{
-        padding-top: 18px;
-    }
-    &__d-link{
-        margin-left: 11px;
-    }
-    &__ul{
+    &__list{
         margin-top: 15px;
         &-sub{
             margin-top: 20px;
         }
     }
+}
+
+.title{
+    font-family: Intro;
+    font-size: 36px;
+    text-align: center;
+}
+
+.text{
+    font-family: Geometria;
+    font-size: 18px;
 }
 
 .products{
@@ -41,7 +41,7 @@
     
 }
 
-.asd-rules{
+.rules{
     color: @col;
     font-family: Intro;
     text-align: center;
@@ -50,30 +50,13 @@
         font-size: 22px;
     }
     &__text{
-        font-family: Geometria;
-        font-size: 18px;
+        padding-top: 18px;
     }
 }
 
-.asd-products-options{
+.products-options{
     width: 31.6%;
-    float:left;
-    &__ul{
-        padding-top: 25px;
-    }
-    &__ul2{
-        margin-bottom: 80px;
-    }
-    &__link{
-        padding-left: 88px;
-    }
-    &__img{
-        float: right;
-        transition: transform 0.2s ease-in-out;
-    }
-    &__reset{
-        margin-top: 15px;
-    }
+    float:left; 
 }
 
 .options{
@@ -88,7 +71,16 @@
         display: block;
         text-align: center;
     }
+    &__list{
+        padding-top: 25px;
+    }
+    &__list2{
+        margin-bottom: 80px;
+    }
     &__link{
+        padding-left: 88px;
+    }
+    &__main-btn{
         width: 62.4%;
         height: 30px;
         background-color: @col;
@@ -101,6 +93,10 @@
         padding-right: 10px;
         line-height: 40px;
         border-bottom: 1px solid rgb(225, 225, 225);
+    }
+    &__img{
+        float: right;
+        transition: transform 0.2s ease-in-out;
     }
     &__sale{
         color: @col;
@@ -121,13 +117,16 @@
         height: 0px;
         transition: height 0.2s ease-in-out;
     }
+    &__reset{
+        margin-top: 15px;
+    }
 }
 
 .active{
     .options__sub-item{
         height: 40px;
     }
-    .asd-products-options__img{
+    .options__img{
         transform: rotate(-180deg);
     }
 }
@@ -141,6 +140,9 @@
     &__img{
         vertical-align: sub;
     }
+    &__link{
+        margin-left: 11px;
+    }  
 }
 
 .product-list{
@@ -155,7 +157,7 @@
         float: left;
         padding-right: 18px;
     }
-    &__li-sub{
+    &__elem-sub{
         font-family: Geometria-Light;
         font-size: 14px;
         color: #5F5F5F;
@@ -164,7 +166,7 @@
         border-bottom: 1px solid rgb(225, 225, 225);
         padding: 15px 30px 36px 10px;
     }
-    &__link{
+    &__purchase{
         margin-top: 13px;
     }
     &__pagination{

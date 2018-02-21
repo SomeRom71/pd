@@ -1,10 +1,10 @@
-.asd-request
-  .asd-container
-    h2.asd-catalog__title.asd-request__h2 Не нашли подходящий товар?
-    p.asd-request__text
-      span.hightlight Оставьте заявку на консультацию
+.request
+  .container
+    h2.request__title.title Не нашли подходящий товар?
+    p.request__text.text
+      span._hightlight Оставьте заявку на консультацию
       | , и наш специалист свяжется с Вами в ближайшее время
-    form.form.asd-request__form
+    form.form.request__form
       .form__wrapper
         +svgsprite("name")
         input.form__input(type='text', placeholder='Как к вам обращаться?')
@@ -14,6 +14,6 @@
       .form__wrapper
         +svgsprite("mail_l")
         input.form__input(type='text', placeholder='На какой e-mail написать?')
-    button.asd-ad__link.asd-request__link.asd-popup__open
-      span.asd-ad__link_wrap.asd-request__link_wrap Оставить заявку
+    button.main-btn.request__btn.popup__open
+      span.main-btn_wrap.request__btn_wrap Оставить заявку
   include popup.jade

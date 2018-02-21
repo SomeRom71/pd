@@ -2,8 +2,8 @@ $(function() {
     // svg4everybody init
     svg4everybody();
     
-	var popupOpenBtn = document.querySelector(".asd-popup__open");
-	var popupCloseBtn = document.querySelector(".asd-popup__close"); 
+	var popupOpenBtn = document.querySelector(".popup__open");
+	var popupCloseBtn = document.querySelector(".popup__close"); 
 	var links = document.querySelectorAll(".options__item");
 	 
 	function handleAccordeonClick(e) {
@@ -11,8 +11,8 @@ $(function() {
 	};
 
 	function popupDisplay() {
-    	var popup = document.querySelector(".asd-popup");
-    	popup.classList.toggle("asd-popup_visible");
+    	var popup = document.querySelector(".popup");
+    	popup.classList.toggle("popup_visible");
 	};
 
 	links.forEach(function(link){
