@@ -88,7 +88,7 @@
 }
 
 .header-contact{
-    width: 25.3%;
+    width: 220px;
     &__item{
         display: block;
         font-family: Geometria;
@@ -109,5 +109,48 @@
     &__item2{
         font-family: Geometria;
         font-size: 18px;
+    }
+}
+
+.contact__sm, .menu_sm{
+    display: none;
+}
+
+.contact__sm, .menu_sm{
+    &-link{
+        font-family: Geometria-bold;
+        font-size: 25px;
+        cursor: pointer;
+        svg{
+            transition: transform 1s ease;
+        }
+    }
+    &-list{
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        background: #fff;
+        z-index: 1;
+        border-radius: 0px 0px 15px 15px;
+        padding: 0 5px;
+        transition: height 0.5s ease;
+        svg{
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.active_sm{
+    .contact__sm-list, .menu_sm-list{
+        height: 55px;
+        border: 1px solid rgba(241,79,17,.2);
+        border-top: none;
+    }
+    .sm-link svg{
+        transform: rotate(-540deg);
+    }
+    .menu_sm-list{
+        height: 107px;
     }
 }

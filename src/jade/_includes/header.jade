@@ -22,12 +22,34 @@ mixin asd-header(options)
               +svgsprite("skype")
               span.header-contact__item_light skype:
               |  generalplast
+          .contact__sm
+            a.contact__sm-link.sm-link Контакты 
+              +svgsprite("arrow")
+            ul.contact__sm-list
+              li
+                a.header-contact__item.header-center__contact-item(href='#')
+                  +svgsprite("mail")
+                  |sales@general-plast.ru
+            
+              li
+                a.header-contact__item.header-center__contact-item(href='#')
+                  +svgsprite("skype")
+                  span.header-contact__item_light skype:
+                  |  generalplast
         nav.nav.header-nav
-          ul
+          ul.nav__list
             - var menu = ["Наша продукция", "Каталог кромки", "Скидка 15%", "Статьи", "Контакты"];
             for name in menu
               li.nav__link.header-nav__item
                 a(href='#')= name
+          .menu_sm
+            a.menu_sm-link.sm-link Меню
+              +svgsprite("arrow")
+            ul.menu_sm-list
+              - var menu = ["Наша продукция", "Каталог кромки", "Скидка 15%", "Статьи", "Контакты"];
+              for name in menu
+                li.nav__link.header-nav__item
+                  a(href='#')= name
       .bascet.header-bascet
         a.bascet__link(href='#')
           +svgsprite("bascet")

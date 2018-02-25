@@ -33,15 +33,26 @@
     background-color: @col;
     opacity: 0.8;
     transition: width .8s ease;
+    z-index: 2;
 }
 
 .map{
-    position: relative;
+    position: relative!important;
     width: 45.57%;
     &:hover{
         .map-point{
             width: 0%;
         }
+    }
+}
+
+#YMapsID{
+    width: 45.57%;
+    height: 602px;
+    iframe{
+        height: 602px;
+        margin-bottom: -3px;
+        width: 100%;
     }
 }
 
