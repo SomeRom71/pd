@@ -1,0 +1,87 @@
+.feedback{
+	display: inline-block;
+	margin-top: 50px;
+	text-align: center;
+	&-wrap{
+		display: flex;
+		justify-content: center;
+		background: url(../../images/feedback-bg.jpg);
+		padding-bottom: 75px;
+		margin-top: -15px;	
+	}
+	&__title{
+		font-family: Geometria-Bold;
+		font-size: 36px;
+	}
+	&__form{
+		margin-top: 30px;
+		text-align: center;
+		.contact-form{
+			background: transparent;
+			border: 1px solid @figure;
+			&__input{
+				letter-spacing: 1px;
+				width: 210px;
+				background: transparent;
+			}
+			&__sub{
+				color: @sub;
+				left: 35px;
+			}
+			&__btn{
+				background: none;
+				margin-top: 25px;
+				&-text{
+					vertical-align: middle;
+				}
+				&:hover{
+					color: #fffc00;
+				}
+			}
+			svg{
+				padding: 5px 10px 5px 20px;
+			}
+		}
+		.figure{
+			&::before{
+				background: #fffc00;
+				box-shadow: 0px 0px 43px 0px rgba(2, 79, 255, 0.43);
+			}
+			&:hover::before{
+				background: @figure;
+			}
+			&::after{
+	            top: 10px;
+	            right: -10px;
+	            bottom: -10px;
+	            left: 10px;
+	            border: 1px solid @figure;
+	            z-index: -3;
+        	}
+        	&:hover::after{        
+	            top: -1px;
+				right: -1px;
+				bottom: -1px;
+				left: -1px;
+        	}
+		}
+	}
+	&__textarea{
+		height: 90px;
+		line-height: 90px;
+		width: 100%!important;
+	}
+	
+	&__license{
+		margin-top: 15px;
+	}
+	&__license, .license__link{
+		color: @sub;
+	}
+}
+
+.textarea{
+	display: flex;
+	margin-top: 35px;
+	border-width: 2px;
+}

@@ -1,0 +1,64 @@
+.description
+    .description__title
+        h1.description__title.description__title-main Оборудование для производства пеллет
+        p.description__title.description__title-garanty Период 
+          span.underline эксплуатации до 100 лет
+          | ,  
+          span.description__figure.figure гарантия 2 года
+    .description__list
+        ul
+            li.description__list-item
+                .figure
+                  +svgsprite("quality")
+                |Используем 
+                span металл повышенной надежности 
+                br
+                | с запасом прочности
+            li.description__list-item
+                .figure
+                  +svgsprite("quality")
+                span 100% автоматизация. 
+                | Все запускается по кнопке.
+                br 
+                |Для обслуживания линии нужен один человек
+            li.description__list-item
+                .figure
+                  +svgsprite("quality")
+                span Оборудование 
+                | будет подобрано
+                br
+                span под Ваше сырье
+    .description__price.price
+        .price__figure.figure
+            p.price__text
+              |Введите ваш телефон и
+              br
+              span.price__text_lg получите прайс на 800 позиций
+            .price__download
+                .price__download-form.contact-form
+                    +svgsprite("smartphone")
+                    input.mask.contact-form__input(placeholder="Ваш телефон" type="tel")
+                    span.contact-form__sub Чтобы мы могли связаться с вами
+                .price__download-btn.contact-form__btn
+                    |Скачать прайс
+                    +svgsprite("download")
+            .price__license.license
+                +svgsprite("checked")
+                |Я даю согласие на обработку персональных данных и соглашаюсь с 
+                a(href="#").license__link.popup__btn политикой конфиденциальности
+    .description__rules.rules
+            .rules__item
+                +svgsprite("users-group")
+                |Монтаж и обучение 
+                br 
+                |персонала бесплатно
+            .rules__item
+                +svgsprite("calendar-with-a-clock-time-tools")
+                |Поставка и запуск линии от 
+                br
+                |3х месяцев с момента 1-ого платежа 
+            .rules__item
+                +svgsprite("wallet-filled-money-tool")
+                |Лизинг 
+                br
+                |от 2% в год

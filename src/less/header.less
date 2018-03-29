@@ -1,152 +1,65 @@
-.header__logo{
-    float: left;
-    margin-right: 20px;
+.header{
+	padding-top: 10px;
 }
 
-.header-center{
-    float: left;
-    margin-top: 10px;
-    width: 71%;
-    &__contact{
-        display: inline-block;
-        float: right;
-        &-item{
-            margin-bottom: 5px;
-        }
-    }
-    &__callback{
-        float: right;
-        margin-left: 130px;
-    }
-    &__wrap{
-        width: 100%;
-        display: inline-block;
-        border-bottom: 1px solid @b-col;
-        line-height: 20px;
-        padding-bottom: 20px;
-    }
+.logo{
+	width: 200px;
+	&__link{
+		display: flex;
+		&_sm{
+			display: none;
+		}
+	}
+	&__sub-text{
+		color: @sub;
+		font-size: 11px;
+		font-family: Geometria-LightItalic;
+		margin-left: 40px;
+	}
 }
 
-.header-nav{
-    text-align: center;
-    &__item{
-        padding-right: 30px;
-        display: inline-block;
-    }
-    li:last-child{
-        padding: 0;
-    }
+.logo, .contact{
+	display: flex;
+	flex-direction: column;
 }
 
-.nav{
-    &__link{
-        font-family: Geometria;
-        font-size: 18px;
-        position: relative;
-        &:after{
-            display: block;
-            content: "";
-            height: 2px;
-            width: 0;
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            background: black;
-            transition: 0.2s ease-in-out;
-        }
-        &:hover, &:focus {
-            &:after {
-                width: 50%;
-            }
-        }
-    }
-}
-
-.header-bascet{
-    float: right;
-    margin-top: 7px;
-}
-
-.bascet{
-    display: inline-block;
-    &__link{
-        position: relative;
-        font-family: Geometria-Light;
-        font-size: 14px;
-    }
-    &__num{
-        position: absolute;
-        left: 51px;
-        top: 16px;
-        background: #ff141d;
-        padding: 1px 6px;
-        border-radius: 12px;
-        color: #fff;
-        font-family: Intro;
-        font-size: 18px;
-    }
-}
-
-.header-contact{
-    width: 220px;
-    &__item{
-        display: block;
-        font-family: Geometria;
-        font-size: 16px;
-        &_light{
-            font-family: Geometria-Light;
-        }
-    }
-}
-
-.callback{
-    width: 280px;
-    text-align: center;
-    &__item{
-        font-family: UniSansHeavyCaps;
-        font-size: 30px;
-    }
-    &__item2{
-        font-family: Geometria;
-        font-size: 18px;
-    }
-}
-
-.contact__sm, .menu_sm{
-    display: none;
-}
-
-.contact__sm, .menu_sm{
-    &-link{
-        font-family: Geometria-bold;
-        font-size: 25px;
-        cursor: pointer;
-        svg{
-            transition: transform 1s ease;
-        }
-    }
-    &-list{
-        height: 0px;
-        overflow: hidden;
-        position: absolute;
-        background: #fff;
-        z-index: 1;
-        border-radius: 0px 0px 15px 15px;
-        padding: 0 5px;
-        transition: height 0.5s ease;
-        svg{
-            padding-right: 8px;
-            vertical-align: middle;
-        }
-    }
-}
-
-.active_sm{
-    .menu_sm-list{
-        border: 1px solid rgba(241,79,17,.2);
-        border-top: none;
-    }
-    .sm-link svg{
-        transform: rotate(-540deg);
-    }
+.contact{
+	width: 250px;
+	&__item{
+		&_phone{
+			padding-bottom: 15px;
+			&-link{
+				font-family: Geometria;
+				font-size: 23px;
+				color: #fff;
+				span{
+					font-family: Geometria-Bold;
+				}
+			}	
+		}
+		&_adress{
+			font-family: Geometria-Light;
+			font-size: 14px;
+			color: @sub;
+			&::before{
+				left: 9px!important;
+			}
+		}
+		&_adress, &_phone{
+			position: relative;
+			z-index: 1;
+			display: flex;
+			&::before{
+				width: 16px;
+				height: 16px;
+				background: @figure;
+				border-radius: 8px;
+				content: " ";
+				position: absolute;
+				z-index: -1;
+				left: -3px;
+				top: 13px;
+			}	
+		}
+	}
 }

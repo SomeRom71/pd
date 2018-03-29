@@ -1,46 +1,64 @@
-.header-contact svg{
-	vertical-align: middle;
-	padding-right: 8px;
+.-call{
+	font-size: 22px;
 }
 
-.bascet svg{
-    display: block;
-    margin: 0 auto;
+.-placeholder{
+	font-size: 31px;
 }
 
-.callback svg{
-    float: left;
-    padding-top: 8px;
-}
-
-.description__elem svg{
-	display: block;
-	margin: 0 auto;
-	height: 64px;
-}
-
-.display svg{
-	vertical-align: middle;
-}
-
-.pagination svg{
-	vertical-align: middle;
-	padding: 0 7px;
-}
-
-.form svg{
-    vertical-align: sub;
-	padding: 0 15px;
-}
-
-.location{
-	svg{
-	vertical-align: middle;
+.-call, .-placeholder{
+	align-self: center;
 	padding-right: 15px;
-	opacity: 0.5;
+	fill: #fff!important;
+}
+
+.-quality{
+	font-size: 32px;
+	vertical-align: middle;
+	padding: 4px 0;
+}
+
+.-checked{
+	font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    float: left;
+    margin-right: 5px;
+    padding-left: 2px;
+    fill: #142156;
+}
+
+.-smartphone, .-email, .-speech-bubble{
+	align-self: center;
+    padding: 0 10px 0 35px;
+    stroke: @figure;
+    font-size: 22px;
+    fill: @figure!important;
+}
+
+.-download{
+	stroke: @figure;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.-users-group, .-calendar-with-a-clock-time-tools, .-wallet-filled-money-tool{
+	font-size: 32px;
+    opacity: 0.5;
+}
+
+.-cursor{
+	vertical-align: middle;
+}
+
+.feedback__form{
+	.-checked{
+		background: @sub;
+		fill: #fff;
 	}
-	&__text svg{
-		float: left;
-		padding: 6px 15px 112px 0px;
+}
+
+.footer{
+	.-call, .-placeholder{
+		fill: @figure!important;
 	}
 }

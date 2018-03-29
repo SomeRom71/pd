@@ -1,0 +1,24 @@
+mixin footer(options)
+  - options = options ? options : {};
+
+footer.footer
+    .container.footer__container
+        .footer__logo.logo
+          a(href="#").logo__link
+            img(src="../images/logo-dark.png" alt="logo-dark")
+          span.logo__sub-text Поставки оборудования для производства пеллет
+        .footer__copyright.copyright
+            p
+                |Все права защищены.
+                br
+                |Любое копирование материалов с сайта запрещено
+            a(href="#").license__link.popup__btn Положение о конфиденциальности информации
+        .footer__contact.contact
+          span.contact__item_phone
+            +svgsprite("call")
+            a(href="tel:+78126703030").contact__item_phone-link +7 (812)
+              span 670 30 30
+          span.contact__item_adress
+            +svgsprite("placeholder")
+            |Санкт-Петербург,
+            |Аптекарская наб., д.6

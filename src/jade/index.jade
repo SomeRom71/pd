@@ -1,14 +1,15 @@
 extends /_includes/layout.jade
 
 block title
-  title ASD
+  title ПромДиалог
   meta(name="description", content="")
 
 block content
-  +asd-header
-  section
-    include /_includes/slider.jade
-    include /_includes/catalog.jade
-    include /_includes/request.jade
-    include /_includes/contact.jade
-  footer
+  .wrap
+    .container
+        +header
+        section
+            include /_includes/content.jade
+        include /_includes/popup.jade
+  include /_includes/feedback.jade
++footer

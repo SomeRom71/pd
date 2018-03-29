@@ -1,167 +1,173 @@
-@media (max-width: 1520px){
-	.callback{
-		width: 230px;
-		&__item{
-			font-size: 26px;
-		}
-		&__item2{
-			font-size: 15px;
-		}
-	}
-	.header-contact{
-		width: 190px;
-		&__item{
-			font-size: 14px;
-		}
-	}
-}
-
-@media (max-width: 1315px){
-	.header-center{
-		width: 65%;
-		&__callback{
-			margin-left: 60px;
-		}
-	}
-	.nav{
-		&__link{
-			font-size: 15px;
-		}
-	}
-}
-
-@media (max-width: 1255px){
-	.header-center{
-		&__wrap{
-			border-bottom: none;
-		}
-	}
-	.callback{
-		margin: 0;
-		&__item{
-			font-size: 24px;
-		}
-		&__item2{
-			font-size: 13px;
-		}
-	}
-
-	.header-contact{
-		display: none;
-	}
-	.nav{
-		&__list{
-			display: none;
-		}
-	}
-	.menu_sm{
-		display: block;
-		position: relative;
-		text-align: center;
-		&-list{
-			width: 100%;
-			margin-top: 25px;
-			.header-nav__item{
-				padding: 5px 15px 0 0;
-			}
-		}
-		&-link{
-			font-size: 20px;
-		}
-	}
-	.active_sm{
-		.menu_sm{
-			&-list{
-				height: 25px;
-				padding: 0 5px 10px;
-			}
-		}
-	}
-}
-
-@media (max-width: 1125px){
-	.header-center{
-		width: 60%;
-	}
-	.logo{
-		img{
-			width: 120px;
-		}
-	}
-	.active_sm{
-		.menu_sm{
-			&-list{
-				height: 50px;
-			}
-			&-link{
-				font-size: 18px;
-			}
-		}
-	}
-}
-
-@media (max-width: 1000px){
-	.header-center{
-		width: 58%;
-	}
-}
-
-@media (max-width: 820px){
+@media (max-width: 1300px){
 	.container{
 		width: 100%;
-		padding: 0 10px;
 	}
-	.callback{
-		float: none;
-		margin: 0 auto;
+	.wrap, .footer{
+		padding: 0 20px;
 	}
-	.header-center__wrap{
-		padding-bottom: 5px;
+}
+
+@media (max-width: 890px){
+	.rules{
+		&__item{
+			font-size: 15px;
+		}
 	}
+	.footer{
+		&__container{
+			flex-direction: column;
+			align-items: center;
+		}
+		&__contact, &__copyright{
+			margin-top: 15px;
+		}
+		&__copyright{
+			order: 1;
+		}
+	}
+}
+
+@media (max-width: 845px){
+	.price{
+		&__download{
+			flex-direction: column;
+			align-items: center;
+			.contact-form{
+				height: 35px;
+				margin-bottom: 20px;
+			}
+		}
+		&__figure{
+			padding: 60px 85px;
+		}
+		.figure{
+			&::before, &::after{
+				transform: skew(0deg, -10deg);
+			}
+		}
+	}
+	.description{
+		&__list-item{
+			font-size: 18px;
+		}
+		&__rules{
+			padding-top: 65px;
+		}
+	}
+}
+
+@media (max-width: 710px){
+	.rules{
+		flex-direction: column;
+		align-items: center;
+		&__item{
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 600px){
 	.header{
-		&__logo{
+		flex-direction: column;
+		align-items: center;
+		background: #FFF;
+		margin: 0 -20px;
+		.logo{
+			margin-bottom: 10px;
+			&__link{
+				display: none;
+				&_sm{
+					display: unset;
+				}
+			}
+		}
+		.contact__item{
+			&_adress{
+				display: none;
+			}
+			&_phone{
+				&-link{
+					color: #000;
+				}
+				.-call{
+					fill: #000!important;
+				}
+			}
+		}
+		.contact{
+			width: unset;
+		}
+	}
+	
+	.description{
+		&__title{
 			text-align: center;
 			margin: 0;
-			float: none;
 		}
-		&-center{
-			width: 100%;
-		}
-	}
-	.bascet{
-		display: table;
-		margin: 0 auto;
-		padding-top: 15px;
-		float: none;
-	}
-	.menu_sm{
-		text-align: center;
-		margin-top: 10px;
-		&-list{
-			margin: 0;
-			padding: 0!important;
-			position: unset;
+		&__list-item{
+			font-size: 16px;
 		}
 	}
-	.active_sm{
-		.menu_sm-list{
-			height: 35px;
+	.popup{
+		width: 100%;
+	}
+}
+
+@media (max-width: 535px){
+	.textarea{
+		display: inline-block;
+		margin-top: 0;
+	}
+	.feedback{
+		&__textarea{
+			width: 212px!important;
+			line-height: unset;
+		}
+		.-speech-bubble{
+			vertical-align: middle;
+		}
+		.contact-form{
+			margin-bottom: 40px;
+			&__btn{
+				margin-top: 0;
+				padding: 3px 30px;
+			}
 		}
 	}
 }
 
-@media (max-width: 565px){
-	.active_sm{
-		.menu_sm-list{
-			height: 60px;
+@media (max-width: 485px){
+	.description{
+		&__list-item{
+			text-align: center;
+			font-size: 14px;
+			line-height: 17px;
+			.figure{
+				display: table;
+				margin: auto;
+				float: none;
+			}
 		}
 	}
-}
-
-@media (max-width: 300px){
-	.active_sm{
-		.menu_sm-list{
-			height: 85px;
+	.price{
+		&__figure{
+			padding: 60px 3px;
+			text-align: center;
+		}
+	}
+	.contact{
+		&__item_phone{
+			font-size: 20px;
+			&::before{
+				left: -1px;
+				top: 10px;
+			}
+		}
+	}
+	.popup{
+		&__header-title{
+			font-size: 16px;
 		}
 	}
 }

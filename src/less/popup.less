@@ -1,22 +1,64 @@
 .popup{
 	display: none;
-	width: 50%;
 	margin: 0 auto;
 	position: absolute;
 	left: 0;
 	right: 0;
-	height: 40%;
-	top: 30%;
-	padding: 50px;
+	width: 570px;
 	background: #FFF;
-	border: 5px solid #f14f11;
-	&__link{
-		margin: 0 auto;
-    	margin-top: 50px;
-    	width: 20.3%;
-    	height: 45px;
+	&__header{
+		background: #f8f8f8;
+		&-title{
+			padding: 35px 0px 30px 70px;
+			font-family: Geometria;
+			font-size: 20px;
+			color: #142156;
+		}
+		&-btn{
+			float: right;
+			padding: 7px;
+			cursor: pointer;
+		}	
 	}
 	&_visible{
 		display: block;
+	}
+	.-close{
+		fill: #142156;
+	}
+	&__text{
+		height: 280px;
+		overflow: scroll;
+		overflow-x: hidden;
+		font-size: 14px;
+		color: #142156;
+		padding: 0 35px;
+		background: #FFF;
+		&-title{
+			font-family: Geometria;
+		}
+		&-indent{
+			font-family: Geometria-Thin;
+		}
+	}
+	&__footer{
+		background: #f8f8f8;
+		padding: 20px 0;
+		display: flex;
+		justify-content: center;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #0346f1;
+		border-radius: 6px;
+	}
+	::-webkit-scrollbar-thumb {
+		height: 60px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		background-color: #fff;
+		box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
+	}
+	::-webkit-scrollbar{
+		width: 9px;
 	}
 }

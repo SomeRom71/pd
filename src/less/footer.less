@@ -1,0 +1,35 @@
+.footer{
+	&__container{
+		display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+	}
+	.contact{
+		&__item{
+			&_phone{
+				padding: 0;
+				&-link{
+					color: #000;
+				}
+			}
+			&_adress, &_phone{
+				&::before{
+					content: none;
+				}
+			}
+		}
+	}
+}
+
+.copyright{
+	text-align: center;
+	color: @sub;
+	font-family: Geometria-ExtraLight;
+	font-size: 12px;
+	.license__link{
+		display: block;
+		font-family: Geometria;
+		padding-top: 10px;
+		color: @sub;
+	}
+}

@@ -1,5 +1,5 @@
 {
-  "name": "ASD",
+  "name": "PD",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -54,6 +54,7 @@
     "gulp.spritesmith": "6.x",
     "gzippo": "0.2.x",
     "i18n": "0.8.x",
+    "inputmask": "^3.3.11",
     "merge-stream": "1.x",
     "uglify-save-license": "0.x",
     "vinyl-buffer": "1.x"
