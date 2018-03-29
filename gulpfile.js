@@ -10,6 +10,10 @@ var pkg = JSON.parse(fs.readFileSync('./package.json'));
 var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del', 'merge-stream', 'vinyl-buffer']
 });
+const webpack = require('webpack-stream');
+
+/* Environment */
+global.isDev = process.env.NODE_ENV !== "production";
 
 /* Error handler closure */
 function errorHandler(task, title) {
@@ -95,9 +99,11 @@ gulp.task('js:copy', function () {
 });
 
 gulp.task('js:webpack', function () {
+    const dist = global.isDev ? './tmp/assets/js' : './dist/assets/js';
+
     return gulp.src(['./src/js/**/*'])
-        .pipe($.webpack(require('./webpack.config.js')))
-        .pipe(gulp.dest('./dist/assets/js'));
+        .pipe(webpack(require('./webpack.config.js'))).on('error', errorHandler('js', 'webpack'))
+        .pipe(gulp.dest(dist));
 });
 
 gulp.task('js:vendor', function () {
@@ -167,7 +173,7 @@ gulp.task('icons:sprites', function () {
 /* Browsersync Server */
 gulp.task('browsersync', function () {
     browserSync.init({
-        server: "./dist",
+        server: ["./dist", "./tmp", "./src/static"],
         notify: false,
         port: 3000,
         ghostMode: {

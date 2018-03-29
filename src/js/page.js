@@ -1,19 +1,18 @@
 import Inputmask from "inputmask";
-$(function() {
-    // svg4everybody init
-    svg4everybody(); 
-    
-    var selector = document.getElementByClassName(".mask");
-	var im = new Inputmask("99-9999999");
-	im.mask(selector);
-	var popupOpenBtn = document.querySelectorAll(".popup__btn");
+// svg4everybody init
+svg4everybody();
+// var Inputmask = require('inputmask');
 
-	popupOpenBtn.forEach(function(popup){
-		popup.addEventListener("click", popupDisplay);
-	});
+var selector = document.querySelector(".mask");
+var im = new Inputmask("99-9999999");
+im.mask(selector);
+var popupOpenBtn = document.querySelectorAll(".popup__btn");
 
-	function popupDisplay() {
-    	var popup = document.querySelector(".popup");
-    	popup.classList.toggle("popup_visible");
-	};
+popupOpenBtn.forEach(function(popup){
+	popup.addEventListener("click", popupDisplay);
 });
+
+function popupDisplay() {
+	var popup = document.querySelector(".popup");
+	popup.classList.toggle("popup_visible");
+};

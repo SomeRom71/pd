@@ -1,0 +1,647 @@
+//Less
+
+@col: #f14f11;
+@b-col: rgba(241, 79, 17,0.2);
+
+@font-face {
+    font-family: Geometria;
+    src: url(../fonts/Geometria.otf);
+}
+
+@font-face {
+    font-family: UniSansHeavyCaps;
+    src: url(../fonts/UniSansHeavyCaps.otf);
+}
+
+@font-face {
+    font-family: Geometria-Light;
+    src: url(../fonts/Geometria-Light.otf);
+}
+
+@font-face {
+    font-family: Geometria-Bold;
+    src: url(../fonts/Geometria-Bold.otf);
+}
+
+@font-face {
+    font-family: Intro;
+    src: url(../fonts/Intro.otf);
+}
+
+@font-face {
+    font-family: Geometria-Medium;
+    src: url(../fonts/Geometria-Medium.otf);
+}
+
+@font-face {
+    font-family: Geometria-Heavy;
+    src: url(../fonts/Geometria-Heavy.otf);
+}
+
+body, h1, h2, h3, h4, h5, p{
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #252525;
+}
+
+button{
+	border: none;
+}
+
+input{
+	background: none;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	margin-top: 20px;
+	display: flex;
+}
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+	clear: both;
+}
+
+.head__logo{
+	float: left;
+	margin-right: 20px;
+}
+
+.head-center{
+	float: left;
+	margin-top: 10px;
+	&__info{
+		display: inline-block;
+		float: right;
+		&-item{
+			margin-bottom: 5px;
+		}
+	}
+	&__callback{
+		float: right;
+		margin-left: 130px;
+		&-img{
+			float: left;
+		}
+	}
+	&__wrap{
+		width: 830px;
+		display: inline-block;
+		border-bottom: 1px solid @b-col;
+		line-height: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.info{
+	width: 210px;
+	&__item{
+		display: block;
+		font-family: Geometria;
+		font-size: 16px;
+		&_light{
+			font-family: Geometria-Light;
+		}
+	}
+	&__img{
+		vertical-align: middle;
+	}
+}
+
+.callback{
+	width: 280px;
+	text-align: center;
+	&__item{
+		font-family: UniSansHeavyCaps;
+		font-size: 30px;
+	}
+	&__item2{
+		font-family: Geometria;
+		font-size: 18px;
+	}
+}
+
+.hightlight{
+	color: @col;
+}
+
+.header-nav{
+	text-align: center;
+	&__li{
+		padding-right: 30px;
+		display: inline-block;
+	}
+	li:last-child{
+		padding: 0;
+	}
+}
+
+.nav{
+	&__link{
+		font-family: Geometria;
+		font-size: 18px;
+	}
+}
+
+.header-bascet{
+	float: right;
+	margin-top: 7px;
+}
+
+.bascet{
+	display: inline-block;
+	&__link{
+		position: relative;
+		font-family: Geometria-Light;
+		font-size: 14px;
+	}
+	&__num{
+		position: absolute;
+		left: 51px;
+		top: 16px;
+		background: #ff141d;
+		padding: 1px 6px;
+		border-radius: 12px;
+		color: #fff;
+		font-family: Intro;
+		font-size: 18px;
+	}
+	&__img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+.ad-wrap{
+	height: 790px;
+	background: url(../images/ad-bg.jpg) no-repeat center;
+	position: relative;
+}
+
+.content-ad{
+	width: 452px;
+	margin-top: 95px;
+	padding-left: 70px;
+	&__title{
+		margin: 40px 0px;
+	}
+	&__text{
+		padding: 30px 0px 40px;
+	}
+	&__link{
+		position: absolute;
+		bottom: -31px;	
+	}
+}
+
+.ad{
+	font-family: Intro;
+	color: #fff;
+	background-color: rgba(236, 110, 32,0.8);
+	position: relative;
+	display: inline-block;
+	&__title{
+		font-size: 60px;
+	}
+	&__del{
+		font-size: 30px;
+	}
+	&__text{
+		font-family: Geometria;
+		font-size: 20px;
+		width: 325px;
+	}
+	&__link{
+		background-color: #f14f11;
+		display: table;
+		padding: 5px;
+		width: 310px;
+		height: 40px;
+	}
+	&__angle{
+		position: absolute;
+		border-top: 348px solid rgba(236,110,32,.8);
+		border-right: 255px solid transparent;
+		top: 0;
+		right: -255px;
+	}
+	&__link_wrap{
+		color: #fff;
+		font-family: Geometria-Bold;
+		font-size: 24px;
+		display: table-cell;
+		text-align: center;
+		border: 2px solid #fff;
+	}
+}
+
+.desc{
+	display: flex;
+	&__wrap{
+		background-color: rgba(29, 32, 37,0.7);
+	}
+	&__angle{
+		border-bottom: 263px solid rgba(29, 32, 37,0.7); 
+		border-left: 279px solid transparent;
+		&_right{ 
+			border-right: 279px solid transparent;
+			border-left: 0;
+		}
+	}
+	&__elem{
+		width: 342px;
+		text-align: center;
+		display: table-cell;
+	}
+	&__text{
+		font-family: Geometria;
+		font-size: 24px;
+		color: #fff;
+	}
+	&__img{
+		display: block;
+		margin: 0 auto;
+	}
+	&__ul{
+		display: inline-block;
+	}
+}
+
+.ad-desc{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	&__wrap{
+		padding: 40px 0px 30px 0px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.catalog{
+	background: url('../images/catalog-bg.jpg');
+	padding: 95px 0 120px;
+	&__title{
+		font-family: Intro;
+		font-size: 36px;
+		text-align: center;
+	}
+	&__h2{
+		padding-bottom: 27px;
+	}
+	&__rules{
+		margin: 0 auto;
+		padding: 22px 50px 18px;
+	}
+	&-products{
+		padding: 37px 0px 75px;
+		margin: 15px 0 45px;
+		display: flex;
+	}
+	&__list{
+		padding: 0 10px 0 30px;
+	}
+	&__p{
+		padding-top: 18px;
+	}
+	&__d-link{
+		margin-left: 11px;
+	}
+	&__ul{
+		margin-top: 15px;
+		&-sub{
+			margin-top: 20px;
+		}
+	}
+}
+
+.rules{
+	width: 970px;
+	color: @col;
+	font-family: Intro;
+	text-align: center;
+	border: 1px solid @b-col;
+	&__title{
+		font-size: 22px;
+	}
+	&__text{
+		font-family: Geometria;
+		font-size: 18px;
+	}
+}
+
+.products{
+	background-color: #fff;
+	box-shadow: 0px 0px 51px 0px rgba(0, 77, 166, 0.21);
+	
+}
+
+.products-side{
+	width: 370px;
+	float:left;
+	&__ul{
+		padding-top: 25px;
+	}
+	&__ul2{
+		margin-bottom: 80px;
+	}
+	&__link{
+		padding-left: 88px;
+	}
+	&__img{
+		float: right;
+		padding-right: 10px;
+	}
+	&__reset{
+		margin-top: 15px;
+	}
+}
+
+.side{
+	@col: #ff141d;
+	display: inline-block;
+	border-right: 1px solid rgb(0, 77, 166);
+	height: 100%;
+	&__title{
+		font-family: Geometria-Medium;
+		font-size: 20px;
+		color: @col;
+		display: block;
+		text-align: center;
+	}
+	&__link{
+		width: 230px;
+		height: 30px;
+		background-color: @col;
+		margin: 0 auto;
+	}
+	&__item{
+		font-family: Geometria;
+		font-size: 20px;
+		width: 300px;
+		line-height: 40px;
+		border-bottom: 1px solid rgb(225, 225, 225);
+	}
+	&__sale{
+		color: @col;
+	}
+	&__reset{
+		font-family: Geometria-Light;
+		font-size: 14px;
+		color: #5f5f5f;
+		display: block;
+		text-align: center;
+	}
+}
+
+.display{
+	&__title{
+		font-family: Geometria-Light;
+		font-size: 18px;
+		color: #5f5f5f;
+	}
+	&__img{
+		vertical-align: sub;
+	}
+}
+
+.prod-list{
+	width: 759px;
+	&__title{
+		font-family: Geometria-Medium;
+		font-size: 20px;
+		display: block;
+		line-height: 13px;
+	}
+	&__img{
+		float: left;
+		padding-right: 18px;
+	}
+	&__li-sub{
+		font-family: Geometria-Light;
+		font-size: 14px;
+		color: #5F5F5F;
+	}
+	&__elem{
+  		border-bottom: 1px solid rgb(225, 225, 225);
+		padding: 15px 30px 36px 10px;
+	}
+	&__link{
+		margin-top: 13px;
+	}
+	&__pagination{
+		margin-top: 55px;
+	}
+}
+
+.buy{
+	float: right;
+	&__wrap{
+		height: 130px;
+		vertical-align: middle;
+		display: table-cell;
+		
+	}
+	&__block{
+		font-family: Geometria;
+		font-size: 16px;
+		color: #252525;
+		text-align: center;
+	}
+	&__cost{
+		font-family: Geometria-Medium;
+		font-size: 18px;
+	}
+	&__link{
+		font-family: Geometria-Bold;
+		font-size: 14px;
+		color: #ff141d;
+		padding: 5px 12px;
+  		border: 4px solid #ff141d;
+  		display: block;
+  	}
+}
+
+.pagination{
+	font-family: Geometria-Light;
+	color: #252525;
+	text-align: center;
+	&__item{
+		display: inline-block;
+		font-family: Geometria;
+		font-size: 20px;
+		padding-right: 20px;
+		&_start{
+			color: rgb(255, 20, 29);
+			font-size: 12px;
+		}
+		&_next{
+			color: #ff141d;
+		}
+		&_active{
+			color: #fff;
+			background-color: #ff141d;
+			width: 25px;
+			height: 25px;
+			border-radius: 10px;
+			border-radius: 15px;
+			padding: 0px 8.29px 2px;
+		}
+		&_end{
+			color: #7c7c7c;
+			font-size: 12px;
+		}
+	}
+	&__img{
+		vertical-align: middle;
+		padding: 0 5px;
+	}
+}
+
+.request{
+	text-align: center;
+	font-family: Geometria;
+	background: url(../images/request-bg.jpg) no-repeat center;
+	padding-bottom: 61px;
+	&__h2{
+		padding: 100px 0 40px;
+	}
+	&__text{
+		width: 750px;
+		font-size: 24px;
+		margin: 0 auto;
+	}
+	&__ad-link{
+		display: block;
+		margin: 0 auto;
+	}
+	&__form{
+		margin: 60px 0;
+	}
+	&__link{
+		margin: 0 auto;
+		height: 45px;
+		&_wrap{
+			display: block;
+		}
+	}
+	&__input{
+		margin: 0 50px;
+	}
+}
+
+.form{
+	&__input{
+		border: none;
+		border-bottom: 1px solid #f14f11;
+		width: 265px;
+		font-size: 18px;
+		padding-left: 55px;
+		background-position: 20px;
+		background-repeat: no-repeat;
+		line-height: 35px;
+		&_name{
+			background-image: url(../images/name.png);
+		}
+		&_phone{
+			background-image: url(../images/u_phone.png);
+		}
+		&_mail{
+			background-image: url(../images/mail_l.png);
+			background-position: 20px 10px;
+		}
+	}
+ }
+
+.contact{
+	display: flex;
+	background: url('../images/catalog-bg.jpg');
+	&__map{
+		margin-right: 70px;
+		float: left;
+	}
+	&__h2{
+		padding: 75px 0 0;
+	}
+	&__phone{
+		margin-bottom: 18px;
+	}
+	&__mail{
+		display: block;
+		margin: 45px 0 50px;
+	}
+}
+
+.map{
+	background: url(../images/map.jpg);
+	width: 875px;
+	height: 602px;
+	position: relative;
+	&-point{
+		width: 100%;
+		height: 100%;
+		background-color: @col;
+		opacity: 0.8;
+		transition: background .8s ease;
+	}
+	&__img{
+		position: absolute;
+		left: 610px;
+		top: 245px;
+	}
+	&:hover{
+		.map-point{
+			background: none;
+		}
+	}
+}
+
+.location{
+	display: inline-block;
+	&__hr{
+		width: 100px;
+		color: @col;
+		float: left;
+		border-top: none;
+	}
+	&__phone{
+		font-family: Geometria-Heavy;
+		font-size: 24px;
+		display: block;
+		margin-top: 55px;
+	}
+	&__text{
+		width: 506px;
+		font-family: Geometria-Light;
+		font-size: 20px;
+		&_m{
+			font-family: Geometria-Medium;
+		}
+	}
+	&__mail{
+		font-family: Geometria-Medium;
+		font-size: 20px;
+	}
+	&__img{
+		padding-right: 17px;
+		vertical-align: middle;
+		opacity: 0.5;
+		&_point{
+			float: left;
+			margin: 0 0 7em;
+		}
+	}
+	&__ad-link{
+		width: 270px;
+	}
+}

@@ -57,6 +57,8 @@
     "inputmask": "^3.3.11",
     "merge-stream": "1.x",
     "uglify-save-license": "0.x",
-    "vinyl-buffer": "1.x"
+    "vinyl-buffer": "1.x",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.3"
   }
 }
