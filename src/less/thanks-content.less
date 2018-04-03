@@ -1,0 +1,79 @@
+.thanks{
+    &-container{
+        .logo__link{
+            display: none;
+            &_sm{
+                display: block;
+            }
+        }
+        .contact__item{
+            &_adress, &_phone{
+                color: #000;
+                &::before{
+                    content: none;
+                }
+                svg{
+                    fill: @figure!important;
+                }
+            }
+            &_phone{
+                &-link{
+                    color: #000;
+                }
+            }
+        }
+    }
+    &__title{
+        margin-top: 150px;
+        font-family: Geometria-Heavy;
+        font-size: 48px;
+        color: @figure;
+    }
+    &__sub-title{
+        font-family: Geometria;
+        font-size: 30px;
+        color: #17255F;
+        margin-top: 55px;
+    }
+    &__btn{
+        margin: 50px 0 197px;
+        &-text{
+            color: @figure;
+        }
+    }
+    .figure{
+        background: transparent;
+        &::before{
+            background: #fffc00;
+            transition: box-shadow .7s ease;
+        }
+        &:hover::before{
+            box-shadow: 0px 0px 43px 0px rgba(2, 79, 255, 0.43);
+        }
+        &::after{
+            content:" ";
+            top: 10px;
+            right: -10px;
+            bottom: -10px;
+            left: 10px;
+            border: 1px solid @figure;
+            z-index: -3;
+            content: "";
+            position: absolute;
+            transform: skew(-15deg);
+            transition: all .7s ease;
+        }
+        &:hover::after{        
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+        }
+    }
+}
+
+.popup{
+    .logo__link{
+        display: block;
+    }
+}

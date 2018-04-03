@@ -1,0 +1,14 @@
+extends /_includes/layout.jade
+
+block title
+  title ПромДиалог
+  meta(name="description", content="")
+
+block content
+  .wrap-thanks.wrap
+    .container.thanks-container
+        +header
+        section
+            include /_includes/thanks-content.jade
+        include /_includes/popup.jade
++footer

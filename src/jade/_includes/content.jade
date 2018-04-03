@@ -34,18 +34,18 @@
               |Введите ваш телефон и
               br
               span.price__text_lg получите прайс на 800 позиций
-            .price__download
+            form.price__download
                 .price__download-form.contact-form
                     +svgsprite("smartphone")
-                    input.mask.contact-form__input(placeholder="Ваш телефон" type="tel")
+                    input.mask.contact-form__input(placeholder="Ваш телефон")
                     span.contact-form__sub Чтобы мы могли связаться с вами
-                .price__download-btn.contact-form__btn
+                button.price__download-btn.contact-form__btn
                     |Скачать прайс
                     +svgsprite("download")
             .price__license.license
                 +svgsprite("checked")
                 |Я даю согласие на обработку персональных данных и соглашаюсь с 
-                a(href="#").license__link.popup__btn политикой конфиденциальности
+                a(href="#" onclick="event.preventDefault()").license__link.popup__btn политикой конфиденциальности
     .description__rules.rules
             .rules__item
                 +svgsprite("users-group")

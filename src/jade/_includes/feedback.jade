@@ -1,22 +1,23 @@
 .feedback-wrap
     .feedback
-        span.feedback__title Появились вопросы? Пишите!
+        .feedback__title Появились вопросы? Пишите!
         form.feedback__form
-            .contact-form
-                +svgsprite("smartphone")
-                input.contact-form__input.feedback__input(placeholder="Введите Ваш телефон")
-                span.contact-form__sub Чтобы мы могли связаться с Вами
-            .contact-form
-                +svgsprite("email")
-                input.contact-form__input.feedback__input(placeholder="Введите Ваш e-mail")
-                span.contact-form__sub.feedback__sub Чтобы мы могли ответить Вам
+            .feedback-input__wrap    
+                .contact-form
+                    +svgsprite("smartphone")
+                    input.mask.contact-form__input.feedback__input(placeholder="Введите Ваш телефон")
+                    span.contact-form__sub Чтобы мы могли связаться с Вами
+                .contact-form
+                    +svgsprite("email")
+                    input.contact-form__input.feedback__input(placeholder="Введите Ваш e-mail" type="email")
+                    span.contact-form__sub.feedback__sub Чтобы мы могли ответить Вам
             .contact-form.textarea
                 +svgsprite("speech-bubble")
-                textarea.contact-form__input.feedback__textarea(placeholder="Задайте Ваш вопрос здесь")
+                textarea.feedback__textarea(placeholder="Задайте Ваш вопрос здесь")
             .contact-form__btn.figure
-                    span.contact-form__btn-text Задать свой вопрос
-                    +svgsprite("cursor")
+                button.contact-form__btn-text Задать свой вопрос
+                +svgsprite("cursor")
             .feedback__license.license
                 +svgsprite("checked")
                 |Я даю согласие на обработку персональных данных и соглашаюсь с 
-                a(href="#").license__link.popup__btn политикой конфиденциальности
+                a(href="#" onclick="event.preventDefault()").license__link.popup__btn политикой конфиденциальности

@@ -20,9 +20,9 @@
 			background: transparent;
 			border: 1px solid @figure;
 			&__input{
-				letter-spacing: 1px;
 				width: 210px;
 				background: transparent;
+				border: none;
 			}
 			&__sub{
 				color: @sub;
@@ -33,13 +33,19 @@
 				margin-top: 25px;
 				&-text{
 					vertical-align: middle;
+					color: @figure;
 				}
 				&:hover{
-					color: #fffc00;
+					button, svg{
+						color: #fffc00;
+					}	
 				}
 			}
 			svg{
 				padding: 5px 10px 5px 20px;
+			}
+			&.textarea{
+				border-width: 2px;
 			}
 		}
 		.figure{
@@ -66,12 +72,29 @@
         	}
 		}
 	}
+	&-input__wrap{
+		display: flex;
+	    justify-content: space-between;
+	}
 	&__textarea{
 		height: 90px;
-		line-height: 90px;
-		width: 100%!important;
+		width: 100%;
+		border: none;
+		background: none;
+		color: @figure;
+		&::-webkit-input-placeholder {
+			line-height: 90px;
+		}
+		&:-moz-placeholder { /* Firefox 18- */ 
+		   line-height: 90px;
+		}
+		&::-moz-placeholder {  /* Firefox 19+ */
+		   line-height: 90px;
+		}
+		&:-ms-input-placeholder {  
+		   line-height: 90px;
+		}
 	}
-	
 	&__license{
 		margin-top: 15px;
 	}
@@ -83,5 +106,4 @@
 .textarea{
 	display: flex;
 	margin-top: 35px;
-	border-width: 2px;
 }

@@ -99,7 +99,7 @@ gulp.task('js:copy', function () {
 });
 
 gulp.task('js:webpack', function () {
-    const dist = global.isDev ? './tmp/assets/js' : './dist/assets/js';
+    const dist = global.isDev ? './dist/assets/js' : './dist/assets/js';
 
     return gulp.src(['./src/js/**/*'])
         .pipe(webpack(require('./webpack.config.js'))).on('error', errorHandler('js', 'webpack'))
