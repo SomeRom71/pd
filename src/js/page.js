@@ -27,4 +27,15 @@ function popupDisplay() {
 };
 
 Scrollbar.init(document.querySelector('.popup__text'));
-$(".feedback__form").submit(sendMail(this, '../sendmail.php'));
+
+const form = document.querySelector('.feedback__form');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    sendMail(this, 'assets/php/sendmail.php')
+});
+
+const form2 = document.querySelector('.price__download');
+form2.addEventListener('submit', function(e){
+    e.preventDefault();
+    sendMail(this, 'assets/php/sendmail.php')
+});

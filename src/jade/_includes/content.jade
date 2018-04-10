@@ -34,12 +34,12 @@
               |Введите ваш телефон и
               br
               span.price__text_lg получите прайс на 800 позиций
-            form.price__download
+            form.price__download.send
                 .price__download-form.contact-form
                     +svgsprite("smartphone")
-                    input.mask.contact-form__input(placeholder="Ваш телефон")
+                    input.mask.contact-form__input(placeholder="Ваш телефон" name="phone")
                     span.contact-form__sub Чтобы мы могли связаться с вами
-                button.price__download-btn.contact-form__btn
+                button(type="submit").price__download-btn.contact-form__btn
                     |Скачать прайс
                     +svgsprite("download")
             .price__license.license

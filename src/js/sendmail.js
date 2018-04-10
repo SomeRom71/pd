@@ -1,14 +1,12 @@
 const sendMail = function(form, phpPath) {
     var form_data = $(form).serialize();
-    console.log(form_data);
-        $.ajax({
+    $.ajax({
         type: "POST", 
         url: phpPath,
         data: form_data,
-            success: function() {
-                   alert("Ваше сообщение отпрвлено!");
-            }
-        });
-        console.log($.ajax());
+        success: function() {
+           document.location.href = ("thanks.html");
+        }
+    });
 };
 export {sendMail};

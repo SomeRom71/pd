@@ -1,19 +1,35 @@
-<?
-if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'mail@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок'; //Загаловок сообщения
-        $message = '
-                <html>
-                    <head>
-                        <title>'.$subject.'</title>
-                    </head>
-                    <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>                        
-                    </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
-}
-?>
+<?php
+$email = $_POST["email"];
+$phone = $_POST["phone"];
+$description = $_POST["description"];
+
+// multiple recipients
+$to = "somerom71@gmail.com";
+
+// subject
+$subj = "Заявка пеллеты";
+
+// message
+$message = "
+<html>
+    <head>
+        <title>Заявка от $email</title>
+    </head>
+    <body><font style=\"font-family: Verdana; font-size: 12px; color: black\">
+        Телефон: <b>$phone</b><br/>
+        Почта: <b>$email</b><br/>
+        Вопрос: <b>$description</b><br/>
+    </body>
+</html>
+";
+
+// To send HTML mail, the Content-type header must be set
+//$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers = 'Content-type: text/html; charset=utf-8' . "\r\n";
+
+// Additional headers
+$headers .= 'From: PELLET LANDING PAGE pellets@gmail.com' . "\r\n";
+
+mail($to, $subj, $message, $headers);
+
+exit;
